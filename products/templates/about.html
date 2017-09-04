@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+	<!-- header end here -->
+	<!-- banner  start -->
+{% block socialup %}
+    {% for rolgezfarm_contacts in aboutcont %}
+    <ul>
+    <li><a target="_blank" href="{{ rolgezfarm_contacts.facebook_link }}" class="fa fa-facebook icon icon-border facebook"> </a></li>
+    <li><a target="_blank" href="{{ rolgezfarm_contacts.twitter_link }}" class="fa fa-twitter icon icon-border twitter"> </a></li>
+    </ul>
+    <div class="clearfix"> </div>
+    {% endfor %}
+{% endblock %}
+
+{% block aboutbanner %}
+	<div class="banner jarallax about-w3banner">
+		<!-- banner-w3ltext -->
+		<div class="banner-w3ltext">
+			<h2>About RolgezFarm</h2>
+		</div>
+		<!-- //banner-w3ltext -->
+	</div>
+{% endblock %}
+	<!-- //banner  start -->
+	<!-- about -->
+{% block aboutus %}
+	<div class="about">
+		<div class="container">
+			<div class="w3ls-title">
+				<h3 class="agileits-title">About Us</h3>
+			</div>
+			<div class="about-w3ls-row">
+				{% for rolgezfarm_services in aboutr %}
+				<div class="col-md-5 about-left">
+					<img src="{{ rolgezfarm_services.photo.url }}" class="img-responsive" alt=""/>
+				</div>
+				<div class="col-md-7 about-right">
+					<div class="about-agile-row">
+						<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+							<ul id="myTab" class=" nav-tabs" role="tablist">
+								<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Our Services</a></li>
+								<li role="presentation"><a href="#carl" role="tab" id="carl-tab" data-toggle="tab" aria-controls="carl">Our History</a></li>
+							</ul>
+							<div class="clearfix"> </div>
+							<div id="myTabContent" class="tab-content">
+
+								<div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
+									<div class="tabcontent-grids">
+										<p>{{ rolgezfarm_services.service_info }}</p>
+										<br/>
+										<h4 style="color:#ff5722;"> Our Service Operating Principles </h4>
+										<ul>
+											<li><i class="fa fa-check-square-o"></i> {{ rolgezfarm_services.principleone }} </li>
+											<li><i class="fa fa-check-square-o"></i> {{ rolgezfarm_services.principletwo }} </li>
+											<li><i class="fa fa-check-square-o"></i> {{ rolgezfarm_services.principlethree }} </li>
+											<li><i class="fa fa-check-square-o"></i> {{ rolgezfarm_services.principlefour }} </li>
+										</ul>
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="carl" aria-labelledby="carl-tab">
+									<div class="tabcontent-grids">
+										<p>{{ rolgezfarm_services.rolgezfarm_history }}</p>
+									</div>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block socialdown %}
+    {% for rolgezfarm_contacts in aboutcont %}
+    <ul>
+    <li><a target="_blank" href="{{ rolgezfarm_contacts.facebook_link }}" class="fa fa-facebook icon icon-border facebook"> </a></li>
+    <li><a target="_blank" href="{{ rolgezfarm_contacts.twitter_link }}" class="fa fa-twitter icon icon-border twitter"> </a></li>
+    </ul>
+    <div class="clearfix"> </div>
+    {% endfor %}
+{% endblock %}
+	<!-- //about -->
+	<!-- services -->
+	<!-- //services -->
+	<!-- features -->
+	<!-- //features -->
+	<!-- footer start here -->
+	<!-- //footer end here -->
+	<!-- start-smooth-scrolling -->

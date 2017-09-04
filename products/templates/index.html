@@ -1,0 +1,216 @@
+{% extends 'base.html' %}
+{% block socialup %}
+   {% for rolgezfarm_contacts in homecont %}
+   <ul>
+   <li><a target="_blank" href="{{ rolgezfarm_contacts.facebook_link }}" class="fa fa-facebook icon icon-border facebook"> </a></li>
+   <li><a target="_blank" href="{{ rolgezfarm_contacts.twitter_link }}" class="fa fa-twitter icon icon-border twitter"> </a></li>
+   </ul>
+   <div class="clearfix"> </div>
+   {% endfor %}
+{% endblock %}
+
+{% block banner %}
+    <div class="banner jarallax">
+		<div class="banner-w3ltext">
+      {% for rolgezfarm_contacts in homecont %}
+			<h4><span class="fa fa-phone"></span> {{ rolgezfarm_contacts.phone_numbers }} </h4>
+      {% endfor %}
+			<h6>1</h6>
+			<div class="flexslider">
+				<ul class="slides">
+					<li>
+						<h5>Home to fresh farm produces</h5>
+						<h2>Welcome To RolgezFarm</h2>
+					</li>
+					<li>
+						<h5>Nyumbani kwa mazao bora ya ukulima</h5>
+						<h3>Karibu RolgezFarm</h3>
+					</li>
+					<li>
+						<h5>You wont miss what you are looking for!</h5>
+						<h3>RolgezFarm Delivers</h3>
+					</li>
+				</ul>
+			</div>
+		</div>
+		</div>
+{% endblock %}
+		<!-- //banner-w3ltext -->
+
+	<!-- //banner start -->
+	<!-- services -->
+{% block services %}
+	<div class="services agileits-w3layouts">
+
+		<div class="container">
+			<div class="services-agileinfo">
+				<div class="col-md-4 col-sm-4 services-w3lsgrids">
+					<div class="services-w3text">
+						<div class="services-textinfo">
+							<i class="fa fa-clone" aria-hidden="true"></i>
+							<h5>Products in Endless Supply</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 services-w3lsgrids">
+					<div class="services-w3text srvs-w3text2">
+						<div class="services-textinfo">
+							<i class="fa fa-heart-o" aria-hidden="true"></i>
+							<h5>Products to Love</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 services-w3lsgrids">
+					<div class="services-w3text srvs-w3text3">
+						<div class="services-textinfo">
+							<i class="fa fa-envelope-o" aria-hidden="true"></i>
+							<h5>Products to ask for More</h5>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+
+	</div>
+{% endblock %}
+	<!-- //services -->
+	<!-- work start here -->
+
+
+{% block work %}
+    <div class="work jarallax">
+		<div class="container">
+			<div class="work-agileinfo">
+				<h3>Are You Intrested in Farm products?</h3>
+				<p>Rolgezfarm Will Deliver to Your Location!.</p>
+				<div class="w3btns-agile">
+					<a href="{% url 'contact' %}">Get In Touch</a>
+				</div>
+			</div>
+		</div>
+		</div>
+{% endblock %}
+
+	<!-- work end here -->
+	<!-- features -->
+
+{% block features %}
+    <div class="features">
+		<div class="container">
+			<div class="w3ls-title">
+				<h3 class="agileits-title">Features</h3>
+			</div>
+			<div class="features-agilerow">
+				<div class="col-sm-6 features-left">
+					<div class="features-w3grid">
+						<div class="col-xs-3 features-w3grid-left">
+							<i class="fa fa-heart-o" aria-hidden="true"></i>
+						</div>
+						<div class="col-xs-9 features-w3grid-right">
+							<h4>Elastic Supply of farm produces</h4>
+							<p>Name the quantity and we will deliver with quality</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="features-w3grid features-w3grid-mdl">
+						<div class="col-xs-3 features-w3grid-left">
+							<i class="fa fa-cogs" aria-hidden="true"></i>
+						</div>
+						<div class="col-xs-9 features-w3grid-right">
+							<h4>Affordability</h4>
+							<p>Our farm produces are available at a flexible costs</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="features-w3grid">
+						<div class="col-xs-3 features-w3grid-left">
+							<i class="fa fa-line-chart" aria-hidden="true"></i>
+						</div>
+						<div class="col-xs-9 features-w3grid-right">
+							<h4>Quality over quantity</h4>
+							<p>We mainly focus on customer relation, satisfaction, and retention. </p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="col-sm-6 features-left">
+					<div class="features-w3grid">
+						<div class="col-xs-3 features-w3grid-left">
+							<i class="fa fa-heart-o" aria-hidden="true"></i>
+						</div>
+						<div class="col-xs-9 features-w3grid-right">
+							<h4>Quick Delivery </h4>
+							<p>To ensure your product demand remains as fresh as possible.</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="features-w3grid features-w3grid-mdl">
+						<div class="col-xs-3 features-w3grid-left">
+							<i class="fa fa-cogs" aria-hidden="true"></i>
+						</div>
+						<div class="col-xs-9 features-w3grid-right">
+							<h4>Seasonal Products Supply</h4>
+							<p>We will avail each agricultural season's produce </p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="features-w3grid">
+						<div class="col-xs-3 features-w3grid-left">
+							<i class="fa fa-line-chart" aria-hidden="true"></i>
+						</div>
+						<div class="col-xs-9 features-w3grid-right">
+							<h4>Reliability </h4>
+							<p>You can rely on the effectiveness of our service delivery </p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		</div>
+{% endblock %}
+
+	<!-- //features -->
+	<!-- news -->
+
+{% block news %}
+    <div class="news">
+		<div class="container">
+			<div class="w3ls-title">
+				<h3 class="agileits-title">Latest Farm Products</h3>
+			</div>
+			<div class="agileits_w3layouts_news_grids">
+        {% for latest_farm_produces in latest %}
+				<div class="col-md-3 col-xs-6 agileits_w3layouts_news_grid">
+					<div class="w3_agileits_news_grid">
+						<img src="{{ latest_farm_produces.photo.url }}" alt=" " class="img-responsive" />
+						<div></div>
+					</div>
+					<h5><a href="#">{{ latest_farm_produces.name }}</a></h5>
+					<p>{{ latest_farm_produces.description }}</p>
+				</div>
+        {% endfor %}
+
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		</div>
+{% endblock %}
+
+{% block socialdown %}
+    {% for rolgezfarm_contacts in homecont %}
+    <ul>
+    <li><a target="_blank" href="{{ rolgezfarm_contacts.facebook_link }}" class="fa fa-facebook icon icon-border facebook"> </a></li>
+    <li><a target="_blank" href="{{ rolgezfarm_contacts.twitter_link }}" class="fa fa-twitter icon icon-border twitter"> </a></li>
+    </ul>
+    <div class="clearfix"> </div>
+    {% endfor %}
+{% endblock %}
+
+	<!-- //news -->
+	<!-- footer start here -->
+
+	<!-- //footer end here -->
+	<!-- FlexSlider -->

@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+	<!-- header end here -->
+	<!-- banner  start -->
+{% block socialup %}
+    {% for rolgezfarm_contacts in prodcont %}
+    <ul>
+    <li><a target="_blank" href="{{ rolgezfarm_contacts.facebook_link }}" class="fa fa-facebook icon icon-border facebook"> </a></li>
+    <li><a target="_blank" href="{{ rolgezfarm_contacts.twitter_link }}" class="fa fa-twitter icon icon-border twitter"> </a></li>
+    </ul>
+    <div class="clearfix"> </div>
+    {% endfor %}
+{% endblock %}
+
+{% block productbanner %}
+	<div class="banner jarallax about-w3banner">
+		<!-- banner-w3ltext -->
+		<div class="banner-w3ltext">
+			<h2>RolgezFarm Products</h2>
+		</div>
+		<!-- //banner-w3ltext -->
+	</div>
+{% endblock %}
+	<!-- //banner  start -->
+	<!-- gallery -->
+{% block gallery %}
+	<div class="gallery">
+		<div class="container">
+			<div class="w3ls-title">
+				<h3 class="agileits-title">Our Products' Gallery</h3>
+			</div>
+			<div class="gallery-grids-top">
+				<div class="gallery-grids agileits-w3layouts">
+          {% for farm_produces in prodr %}
+					<div class="col-md-4 col-sm-4 col-xs-6 gallery-grid-img">
+						<a class="example-image-link w3-agilepic" href="images/g1.jpg" data-lightbox="example-set" data-title="">
+							<img class="example-image img-responsive" src="{{ farm_produces.photo.url }}" alt=""/>
+							<div class="w3ls-overlay">
+								<h4>{{ farm_produces.name }}<p style="color:black;">{{ farm_produces.description }}</p></h4>
+
+							</div>
+						</a>
+					</div>
+          {% endfor %}
+					<div class="clearfix"> </div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+{% block socialdown %}
+    {% for rolgezfarm_contacts in prodcont %}
+    <ul>
+    <li><a target="_blank" href="{{ rolgezfarm_contacts.facebook_link }}" class="fa fa-facebook icon icon-border facebook"> </a></li>
+    <li><a target="_blank" href="{{ rolgezfarm_contacts.twitter_link }}" class="fa fa-twitter icon icon-border twitter"> </a></li>
+    </ul>
+    <div class="clearfix"> </div>
+    {% endfor %}
+{% endblock %}
+	<!-- //gallery -->
+	<!-- footer start here -->
