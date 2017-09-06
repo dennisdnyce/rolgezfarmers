@@ -66,6 +66,7 @@ class Rolgezfarm_contacts(models.Model):
     phone_numbers = models.CharField(max_length=200)
     facebook_link = models.CharField(max_length=200)
     twitter_link = models.CharField(max_length=200)
+    current_year = models.CharField(max_length=10, default="2017")
     created_date = models.DateTimeField(
              default=timezone.now)
     published_date = models.DateTimeField(

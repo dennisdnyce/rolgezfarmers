@@ -57,5 +57,10 @@
     <div class="clearfix"> </div>
     {% endfor %}
 {% endblock %}
+{% block year %}
+     {% for rolgezfarm_contacts in prodcont %}
+     <p style="size:18px;">© {{ rolgezfarm_contacts.current_year }} RolgezFarm.<br/> All rights reserved.<br/> Designed by <a target="_blank" href="http://www.peerware.co.ke"> PHS</a></p>
+      {% endfor %}
+{% endblock %}
 	<!-- //gallery -->
 	<!-- footer start here -->
